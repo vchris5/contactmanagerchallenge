@@ -1,3 +1,4 @@
 .vs/
 ContactManagerStarter/bin/
 ContactManagerStarter/obj/
+.DS_Store
