@@ -34,6 +34,7 @@ $(function () {
         let emailAddress = $('#newEmailAddress').val();
         let emailAddressType = $('#newEmailAddressType').val();
         let emailTypeClass;
+        let badgeOutput;
 
         if (emailAddressType === "Personal") {
             emailTypeClass = "badge-primary"; //blue badge
@@ -42,18 +43,33 @@ $(function () {
         }
 
         if (validateEmail(emailAddress)) {
-                  $("#emailList").append(
-            '<li class="list-group-item emailListItem" data-email="' + emailAddress + '" data-type="' + emailAddressType + '">' +
-            '<span class="badge ' + emailTypeClass + ' m-l-10">' + emailAddressType + '</span>' +
-            '<span class="m-l-20">' + emailAddress + ' </span>' +
-            '<a class="redText pointer float-right removeEmail" title="Delete Email">X</a>' +
-            '</li>');
+            $("#emailList").append(
+                '<li class="list-group-item emailListItem" data-email="' + emailAddress + '" data-type="' + emailAddressType + '">' +
+                '<input class="isPrimaryCheckbox m-l-10" type="checkbox">' +
+                '<span class="badge ' + emailTypeClass + ' m-l-10">' + emailAddressType + '</span>' +
+                '<span class="m-l-20">' + emailAddress + ' </span>' +
+                '<a class="redText pointer float-right removeEmail" title="Delete Email">X</a>' +
+                '</li>');
             $('#newEmailAddress').val("");  
             $('#newEmailAddress').removeClass("invalidInput");
             $('#invalidEmailFeedback').hide();
         } else {
             $('#newEmailAddress').addClass("invalidInput");
             $('#invalidEmailFeedback').show();
+        }
+    });
+
+    $(document).on("change", ".isPrimaryCheckbox", function () {
+        if ($(this).prop("checked")) {
+            $('.isPrimaryCheckbox').not(this).prop("checked", false)
+                .parent().find('.badge').show()
+                .parent().find('.badgePrimary').hide();
+            $(this).parent().find('.badge').hide()
+                .parent().find('.badgePrimary').show();
+        }
+        else {
+            $(this).parent().find('.badge').show()
+                .parent().find('.badgePrimary').hide();
         }
     });
 
@@ -113,7 +129,8 @@ $(function () {
             return $(".emailListItem").map(function () {
                 return {
                     Email: $(this).data("email"),
-                    Type: $(this).data("type")
+                    Type: $(this).data("type"),
+                    IsPrimary: $(this).find(".isPrimaryCheckbox").prop("checked")
                 }
             }).get();
         }
@@ -214,7 +231,7 @@ $(function () {
             }
         });
     });
- 
+
     function loadContactTable() {
         $.ajax({
             type: "GET",

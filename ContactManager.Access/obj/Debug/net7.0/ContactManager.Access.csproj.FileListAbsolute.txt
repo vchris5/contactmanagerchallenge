@@ -1,0 +1,14 @@
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/obj/Debug/net7.0/ContactManager.Access.csproj.AssemblyReference.cache
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/obj/Debug/net7.0/ContactManager.Access.GeneratedMSBuildEditorConfig.editorconfig
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/obj/Debug/net7.0/ContactManager.Access.AssemblyInfoInputs.cache
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/obj/Debug/net7.0/ContactManager.Access.AssemblyInfo.cs
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/obj/Debug/net7.0/ContactManager.Access.csproj.CoreCompileInputs.cache
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/bin/Debug/net7.0/ContactManager.Access.deps.json
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/bin/Debug/net7.0/ContactManager.Access.runtimeconfig.json
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/bin/Debug/net7.0/ContactManager.Access.dll
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/bin/Debug/net7.0/ContactManager.Access.pdb
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/obj/Debug/net7.0/ContactManager.Access.dll
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/obj/Debug/net7.0/refint/ContactManager.Access.dll
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/obj/Debug/net7.0/ContactManager.Access.pdb
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/obj/Debug/net7.0/ContactManager.Access.genruntimeconfig.cache
+/Users/christiansabia/Desktop/code-exe/master/ContactManager.Access/obj/Debug/net7.0/ref/ContactManager.Access.dll

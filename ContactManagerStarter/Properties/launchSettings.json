@@ -10,12 +10,12 @@
   "profiles": {
     "ContactManagerStarter": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7276;http://localhost:5276",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "dotnetRunMessages": true
     },
     "IIS Express": {
       "commandName": "IISExpress",

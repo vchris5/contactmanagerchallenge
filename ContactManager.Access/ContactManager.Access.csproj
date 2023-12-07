@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Targeting the latest version of .NET -->
+    <TargetFramework>net7.0</TargetFramework>
+    
+    <!-- Enabling nullable reference types for enhanced code safety -->
+    <Nullable>enable</Nullable>
+    
+    <!-- Enabling implicit usings for cleaner code -->
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <!-- Managing project folders -->
+  <ItemGroup>
+    <None Remove="Data\" />
+    <None Remove="Migrations\" />
+    <None Remove="Models\" />
+    <None Remove="Repository\" />
+    <None Remove="Repository\IRepository\" />
+    <None Remove="Service\" />
+    <None Remove="Service\IService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Models\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Repository\IRepository\" />
+    <Folder Include="Service\" />
+    <Folder Include="Service\IService\" />
+  </ItemGroup>
+
+  <!-- Package references for Entity Framework Core and SQL Server -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+  </ItemGroup>
+
+</Project>

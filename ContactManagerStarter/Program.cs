@@ -1,8 +1,14 @@
-using ContactManager.Data;
+using ContactManager.Access.Data;
 using ContactManager.Hubs;
 using Newtonsoft.Json;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
+using ContactManager.Access.Repository;
+using ContactManager.Access.Repository.IRepository;
+using ContactManager.Access.Service;
+using ContactManager.Access.Service.IService;
+// using ElmahCore.Mvc;
+// using ElmahCore.Sql;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +27,14 @@ builder.Services.AddDbContext<ApplicationContext>(options =>
 
 builder.Services.AddSignalR();
 
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IContactService, ContactService>();
+
+// builder.Services.AddElmah();
+
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -30,6 +44,8 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+// app.UseElmah();
 
 using (var scope = app.Services.CreateScope())
 {
