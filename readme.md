@@ -2,8 +2,8 @@
 This solution contains an easy to use and simple contact manager. It also works well on mobile devices!
 
 ## Technologies
-- Visual Studio 2022
-- SQL Server 2019
+- Visual Studio Code
+- Docker
 - .NET 7
 - EntityFramework Core 7
 - Bootstrap 4.4.1
